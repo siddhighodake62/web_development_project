@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Student Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Admin - Student Management System</h1>
+    </header>
+    <nav>
+        <a href="#add-student">Add Student</a>
+        <a href="#view-students">View Students</a>
+    </nav>
+    <div class="container">
+        <!-- Add Student Section -->
+        <div class="section" id="add-student">
+            <h2>Add New Student</h2>
+            <form action="#" method="POST">
+                <label for="student-id">Student ID:</label>
+                <input type="text" id="student-id" name="student-id" required>
+                <label for="student-name">Student Name:</label>
+                <input type="text" id="student-name" name="student-name" required>
+                <label for="student-email">Email:</label>
+                <input type="email" id="student-email" name="student-email" required>
+                <label for="student-phone">Phone:</label>
+                <input type="text" id="student-phone" name="student-phone" required>
+                <label for="student-room">Room Number:</label>
+                <input type="text" id="student-room" name="student-room" required>
+                <button type="submit">Add Student</button>
+            </form>
+        </div>
+
+        <!-- View Students Section -->
+        <div class="section" id="view-students">
+            <h2>All Students</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Room Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example student entry (this can be dynamically generated from a backend) -->
+                    <tr>
+                        <td>101</td>
+                        <td>John Doe</td>
+                        <td>johndoe@example.com</td>
+                        <td>+1234567890</td>
+                        <td>101A</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Jane Smith</td>
+                        <td>janesmith@example.com</td>
+                        <td>+1234567891</td>
+                        <td>102B</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <!-- More students can be added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Hostel Management System - Admin</p>
+    </footer>
+</body>
+</html>
